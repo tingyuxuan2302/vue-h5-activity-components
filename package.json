@@ -1,0 +1,19 @@
+{
+  "name": "vue-h5-activity-components",
+  "version": "1.0.0",
+  "description": "vue2 h5移动端组件库",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tingyuxuan2302/vue-h5-activity-components.git"
+  },
+  "author": "Boi Yong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tingyuxuan2302/vue-h5-activity-components/issues"
+  },
+  "homepage": "https://github.com/tingyuxuan2302/vue-h5-activity-components#readme"
+}
