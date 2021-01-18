@@ -2,25 +2,29 @@ const path = require('path');
 const webpack = require('webpack');
 const {merge} = require('webpack-merge');
 const webpackBaseConfig = require('./webpack.base.js');
-
+const components = require('./components.json')
 process.env.NODE_ENV = 'production';
+
+
+const basePath = path.resolve(__dirname, '../');
+let entries = {};
+Object.keys(components).forEach(key => {
+  entries[key] = path.join(basePath, 'src', components[key]);
+});
 
 module.exports = merge(webpackBaseConfig, {
   devtool: 'source-map',
-  mode: 'production',
-  entry: {
-    main: path.resolve(__dirname, '../src/index.js'),
-  },
+  mode: "production",
+  entry: entries,
   output: {
     path: path.resolve(__dirname, '../lib'),
     publicPath: '/lib/',
-    filename: 'boi-activity-h5.min.js', // webpack bundle 的名称
-    library: 'boiActivityComponents', // 类库导出
-    libraryTarget: "umd",
+    filename: '[name].js',
+    chunkFilename: '[id].js',
+    libraryTarget: 'umd',
     umdNamedDefine: true
   },
   externals: {
-    // 让组件库引用外部环境的VUE
     vue: {
       root: 'Vue',
       commonjs: 'vue',

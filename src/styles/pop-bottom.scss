@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import "common/var";
+@import "common/mixins";
+
+@include b(pop-bottom-container) {
+  .shadow {
+    width: 0;
+    height: 0;
+    position: fixed;
+    z-index: 800;
+    background: #000;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    &.shadow-show {
+      width: 100%;
+      height: 100%;
+      opacity: 0.85;
+    }
+  }
+  .pop-botm {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-height: 80%;
+    padding-bottom: env(safe-area-inset-bottom);
+    background: linear-gradient(to bottom, #ffb755, rgba(255, 230, 184, 0.62));
+    border-radius: 16px 16px 0 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+    &.pop-botm-show {
+      transform: translateY(0);
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 3px;
+      left: 3px;
+      right: 3px;
+      bottom: 0;
+      border-radius: 14px 14px 0 0;
+    }
+    &::before {
+      background: linear-gradient(to bottom, #fff3e1, #ffe3c7);
+    }
+    &::after {
+      background: url(https://images3.c-ctrip.com/zt/activity/20201204-ztrip-flight-seckill/pop-botm-bg.png)
+        repeat;
+      background-size: 0.75rem 0.75rem;
+      opacity: 0.25;
+    }
+    .icon-closed {
+      width: 1.1rem;
+      height: 1.1rem;
+      position: absolute;
+      z-index: 10;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: url(https://images3.c-ctrip.com/zt/activity/20201204-ztrip-flight-seckill/pop-botm-closed.png)
+        no-repeat;
+      background-size: cover;
+    }
+  }
+  .pop-botm-hd {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #b12e0b;
+    font-weight: bold;
+    padding: 0.75rem 0;
+    position: relative;
+    z-index: 2;
+    &::before,
+    &::after {
+      display: inline-block;
+      vertical-align: middle;
+      content: "";
+      background: url(https://images3.c-ctrip.com/zt/activity/20201204-ztrip-flight-seckill/tit-bg.png)
+        no-repeat;
+      width: 1.6rem;
+      height: 0.65rem;
+      background-size: 1.6rem 2.65rem;
+      margin: -2px 0.55rem 0;
+    }
+    &::before {
+      background-position: 0 -1.35rem;
+    }
+    &::after {
+      background-position: 0 -2rem;
+    }
+  }
+  .pop-botm-bd {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }  
+}

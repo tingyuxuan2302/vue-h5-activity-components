@@ -1,11 +1,13 @@
 {
-  "name": "vue-h5-activity-components",
+  "name": "boi-vue-components",
   "version": "1.0.0",
   "description": "vue2 h5移动端组件库",
-  "main": "index.js",
+  "main": "lib/boi-activity-h5.min.js",
   "scripts": {
-    "build:style": "gulp --gulpfile build/gen-style.js",
+    "build:style": "gulp --gulpfile build/gen.style.js",
     "build:prod": "webpack --config build/webpack.prod.js",
+    "build:components": "webpack --config build/webpack.component.js",
+    "dist": "npm run build:style && npm run build:prod && npm run build:components",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -61,6 +63,7 @@
     "url-loader": "^2.1.0",
     "vue-loader": "^15.7.1",
     "vue-style-loader": "^4.1.2",
-    "vuepress": "^1.0.3"
+    "vuepress": "^1.0.3",
+    "webpack-merge": "^5.7.3"
   }
 }
