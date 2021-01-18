@@ -8,6 +8,10 @@
     "build:prod": "webpack --config build/webpack.prod.js",
     "build:components": "webpack --config build/webpack.component.js",
     "dist": "npm run build:style && npm run build:prod && npm run build:components",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "deploy": "gh-pages -d docs/.vuepress/dist",
+    "deploy:build": "npm run docs:build && npm run deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -36,7 +40,7 @@
     "cross-env": "^5.2.0",
     "css-loader": "2.1.1",
     "file-loader": "^4.2.0",
-    "gh-pages": "^2.1.1",
+    "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^7.0.0",
     "gulp-clean-css": "^4.2.0",

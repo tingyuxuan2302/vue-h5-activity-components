@@ -1,6 +1,8 @@
 import PopBottom from './packages/pop-bottom';
+import Button from './packages/button';
 
 const components = {
+  lButton: Button,
   boiPopBottom: PopBottom
 };
 

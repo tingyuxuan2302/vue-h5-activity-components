@@ -1,3 +1,4 @@
 {
-  "pop-bottom": "packages/pop-bottom/index.js"
+  "pop-bottom": "packages/pop-bottom/index.js",
+  "button": "packages/button/index.js"
 }
