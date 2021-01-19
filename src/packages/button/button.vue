@@ -1,5 +1,5 @@
 <template>
-  <button class="lime-button" :class="{[`lime-button-${type}`]: true}" type="button">
+  <button @click="handleClick" class="lime-button" :class="{[`lime-button-${type}`]: true}" type="button">
     <slot></slot>
   </button>
 </template>
@@ -16,6 +16,11 @@ export default {
       },
       type: String,
       default: 'default'
+    }
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit('handleClick', e)
     }
   }
 }

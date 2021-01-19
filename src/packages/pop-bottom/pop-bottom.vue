@@ -1,5 +1,5 @@
 <template>
-  <div class="pop-bottom-container">
+  <div class="boi-pop-bottom-container">
     <div
       @click="handleClose"
       class="shadow"
@@ -13,7 +13,6 @@
     </div>
   </div>
 </template>
-
 <script>
 export default {
   name: "PopBottom",
