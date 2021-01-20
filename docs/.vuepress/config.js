@@ -1,5 +1,5 @@
 module.exports = {
   title: 'Hello VuePress',
   description: 'Just playing around',
-  // base: '/boi/'
+  base: '/vue-h5-activity-components/'
 }
