@@ -38,7 +38,7 @@ module.exports = {
                   sourceMap: true,
                 },
               }
-            ]
+            ],
           },
           postLoaders: {
             html: 'babel-loader?sourceMap'
@@ -48,11 +48,18 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        options: {
-          sourceMap: true,
-        },
         exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'eslint-loader'
+          },
+        ]
       },
       {
         test: /.css$/,

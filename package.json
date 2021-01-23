@@ -26,7 +26,6 @@
   "homepage": "https://github.com/tingyuxuan2302/vue-h5-activity-components#readme",
   "dependencies": {
     "async-validator": "^3.0.4",
-    "core-js": "2.6.9",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.7"
   },
@@ -35,11 +34,14 @@
     "@babel/plugin-transform-runtime": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.0.6",
     "chai": "^4.2.0",
+    "core-js": "^2.6.9",
     "cross-env": "^5.2.0",
     "css-loader": "2.1.1",
     "eslint": "^7.18.0",
+    "eslint-loader": "^4.0.2",
     "eslint-plugin-vue": "^7.4.1",
     "file-loader": "^4.2.0",
     "gh-pages": "^2.2.0",
