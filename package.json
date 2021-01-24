@@ -82,6 +82,5 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,vue,jsx,ts,html}": "eslint"
   }
 }
