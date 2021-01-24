@@ -32,8 +32,7 @@ export default {
     }
   },
   methods: {
-    handleClose(e) {
-      const a = "2";
+    handleClose() {
       this.$emit("handlePopClose");
     }
   },
