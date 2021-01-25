@@ -6,7 +6,7 @@ const components = {
   boiPopBottom: PopBottom
 };
 
-const install = function(Vue, options) {
+const install = function(Vue) {
   Object.keys(components).forEach(key => {
     Vue.component(key, components[key]); 
   })
