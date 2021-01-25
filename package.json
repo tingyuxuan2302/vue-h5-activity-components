@@ -83,6 +83,6 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx,vue,html}": "npm run lint"
+    "src/**/*.{js,jsx,ts,tsx,vue,html}": "eslint"
   }
 }
