@@ -11,6 +11,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|vue)$/,
+        loader: "eslint-loader",
+        enforce: "pre",
+        //指定检查的目录
+        include: [resolve(__dirname, 'src')],
+      },
+      {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: {
@@ -56,9 +63,9 @@ module.exports = {
               sourceMap: true,
             },
           },
-          {
-            loader: 'eslint-loader'
-          },
+          // {
+          //   loader: 'eslint-loader'
+          // },
         ]
       },
       {

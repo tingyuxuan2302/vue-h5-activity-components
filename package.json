@@ -12,6 +12,7 @@
     "docs:build": "vuepress build docs",
     "deploy": "gh-pages -d docs/.vuepress/dist",
     "deploy:build": "npm run docs:build && npm run deploy",
+    "lint": "eslint --ext .js,.vue src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -78,9 +79,8 @@
   },
   "husky": {
     "hook": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "npm run lint"
     }
   },
-  "lint-staged": {
-  }
+  "lint-staged": {}
 }
